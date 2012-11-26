@@ -43,7 +43,7 @@ class ProtobufCxx11 < Formula
     mv "#{lib}/libprotobuf-lite.a", "#{lib}/libprotobuf-cxx11-lite.a"
 
     # Update the pkg-config files so that they contain the correct library name
-    ["protobuf-c++11.pc", "protobuf-lite-c++11.pc"].each do |f|
+    ["protobuf-c++11.pc", "protobuf-c++11-lite.pc"].each do |f|
         inreplace "#{lib}/pkgconfig/#{f}" do |s| 
             s.gsub! /-lprotobuf/, '-lprotobuf-cxx11'
         end
