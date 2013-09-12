@@ -6,10 +6,14 @@ class Stlink < Formula
   head 'https://github.com/texane/stlink.git', :using => :git
   sha1 ''
 
+  depends_on 'automake' => :build
+  depends_on 'libusb'
+
   def install
     system "./autogen.sh"
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
                           "--prefix=#{prefix}"
+    system "make"
     system "make install"
   end
 
