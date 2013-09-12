@@ -6,6 +6,7 @@ class Stlink < Formula
   head 'https://github.com/texane/stlink.git', :using => :git
   sha1 ''
 
+  depends_on 'pkg-config' => :build
   depends_on 'automake' => :build
   depends_on 'libusb'
 
