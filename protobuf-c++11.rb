@@ -2,8 +2,8 @@ require 'formula'
 
 class ProtobufCxx11 < Formula
   homepage 'http://code.google.com/p/protobuf/'
-  url 'http://protobuf.googlecode.com/files/protobuf-2.4.1.tar.bz2'
-  sha1 'df5867e37a4b51fb69f53a8baf5b994938691d6d'
+  url 'http://protobuf.googlecode.com/files/protobuf-2.5.0.tar.bz2'
+  sha1 '62c10dcdac4b69cc8c6bb19f73db40c264cb2726'
 
   option :universal
 
@@ -65,22 +65,5 @@ class ProtobufCxx11 < Formula
     protobuf.
     EOS
   end
-
-  def patches
-      # Missing an include, patch is the same as on the FreeBSD ports tree:
-      # http://lists.freebsd.org/pipermail/freebsd-ports-bugs/2012-March/229642.html
-      DATA
-    end
 end
-
-__END__
---- protobuf-2.4.1/src/google/protobuf/message.cc.orig	2012-11-25 18:58:20.000000000 -0700
-+++ protobuf-2.4.1/src/google/protobuf/message.cc	2012-11-25 18:58:45.000000000 -0700
-@@ -32,6 +32,7 @@
- //  Based on original Protocol Buffers design by
- //  Sanjay Ghemawat, Jeff Dean, and others.
- 
-+#include <iostream>
- #include <stack>
- #include <google/protobuf/stubs/hash.h>
 
