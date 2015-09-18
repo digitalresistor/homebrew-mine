@@ -1,17 +1,11 @@
-homebrew-compat
-===============
+homebrew-mine
+=============
 
-This repository exists for the sole purpose of providing me with compatibility
-formula that will most likely never get accepted by the main project.
-
-The formula are mainly here because I need to build certain ones with
-C++11/libc++ support along with the original libraries under an older version
-of the C++ standard and libstdc++.
-
+Formula that will not be accepted by the main project, thus live here for me to use.
 
 Tap me
 ------
 
 You can tap this repository by running the following:
 
-    brew tap bertjwregeer/compat
+    brew tap bertjwregeer/mine
