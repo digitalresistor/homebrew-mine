@@ -1,7 +1,7 @@
 class Ceph < Formula
   desc "Ceph is a scaleable distributed file system. Client tools/libraries only."
   homepage "http://ceph.com/"
-  head "https://github.com/ceph/ceph.git"
+  head "https://github.com/ceph/ceph.git", :revision => "391cfb9f484645e2c01840903e009fea0fdbcdd3"
 
   depends_on "libtool" => :build
   depends_on "automake" => :build
